@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      - DB_USER=root
+      - DB_PASSWORD=Sarvesh@123
+      - DB_NAME=cloudtasker
+
+  db:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: Sarvesh@123
+      MYSQL_DATABASE: cloudtasker
+    ports:
+      - "3306:3306"
