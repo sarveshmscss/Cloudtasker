@@ -4,7 +4,7 @@ import os
 
 app = Flask(__name__)
 
-# Configuration for MySQL
+
 app.config['MYSQL_HOST'] = os.getenv('MYSQL_HOST', 'localhost')
 app.config['MYSQL_USER'] = os.getenv('MYSQL_USER', 'root')
 app.config['MYSQL_PASSWORD'] = os.getenv('MYSQL_PASSWORD', 'Sarvesh@123')
